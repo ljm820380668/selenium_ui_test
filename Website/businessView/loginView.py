@@ -1,8 +1,10 @@
+import logging
+from Website.common.start_driver import driverStart
 from selenium.webdriver.common.by import By
-from AutoTest_project.Website.test_case.page_object.BasePage import Page
+from Website.common.common_fun import Common
 
 
-class LoginPage(Page):
+class LoginView(Common):
     url="/"
     username_loc=(By.NAME,'email')
     password_loc=(By.NAME,'password')
@@ -35,3 +37,7 @@ class LoginPage(Page):
 
     def type_loginFail_hint(self):
         return  self.find_element(*self.username_loc).text
+
+if __name__ == '__main__':
+    driver=driverStart()
+    driver.get("http://www.baidu.com")

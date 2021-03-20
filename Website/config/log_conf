@@ -1,0 +1,45 @@
+# loggers 日志器对象列表
+[loggers]
+keys=root,main
+
+#设置日志级别、输出位置（控制台和文件）
+[logger_root]
+level=DEBUG
+handlers=consoleHandlers,fileHandlers
+
+# 配置 logger_main ：设置日志级别、日志输出指定的处理器配置文件，如: consoleHandlers,fileHandlers
+[logger_main]
+level=DEBUG
+handlers=consoleHandlers,fileHandlers
+qualname=main
+#propagate=0表示输出日志，但是消息不传递；propagate=1是输出日志，同时消息往更高级别传递
+propagate=0
+
+[handlers] #handlers处理器对象列表
+keys=consoleHandlers,fileHandlers
+
+[handler_consoleHandlers]
+# 处理器配置文件consoleHandlers， 指定控制台输出，将日志消息发送到输出到Stream，如std.out, std.err或任何file-like对象、
+# 级别、输出格式、参数
+class=StreamHandler
+level=DEBUG
+formatter=fmt02
+args=(sys.stdout,)
+
+[handler_fileHandlers]
+# 处理器配置文件 ，将日志消息发送到磁盘文件，以文件大小来 分割，每隔 1000 Byte 划分一个日志文件，备份文件为 3 个
+#指定日志文件的打开模式，默认为’a’
+class=FileHandler
+level=DEBUG
+formatter=fmt01
+#设置日志输出路径
+args=('../log/test.log','a')
+
+[formatters] # formatters 格式对象列表
+keys=fmt01,fmt02
+
+[formatter_fmt01] # fmt 格式配置
+format=%(asctime)s %(filename)s[line:%(lineno)d]%(levelname)s-%(message)s
+
+[formatter_fmt02] # fmt 格式配置
+format=%(asctime)s-%(name)s-%(levelname)s-%(message)s

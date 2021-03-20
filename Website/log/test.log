@@ -1,0 +1,15 @@
+2021-03-20 19:57:17,492 run.py[line:22]INFO-start run test case.............
+2021-03-20 19:57:22,499 test_login.py[line:13]INFO-testlogin1_normal is start test....
+2021-03-20 19:57:22,503 common_fun.py[line:39]INFO-获取csv文件第1 行数据为:['ljm_820380668@163.com', 'ljm19880729']
+2021-03-20 19:57:22,504 baseView.py[line:16]INFO-open The Test page is https://mail.163.com/
+2021-03-20 19:57:33,553 common_fun.py[line:52]INFO-------------开始捕捉login页面截图---------
+2021-03-20 19:57:41,263 common_fun.py[line:39]INFO-获取csv文件第2 行数据为:['ljm_820380668@163.com', '123456']
+2021-03-20 19:57:41,264 baseView.py[line:16]INFO-open The Test page is https://mail.163.com/
+2021-03-20 19:57:49,431 common_fun.py[line:52]INFO-------------开始捕捉login页面截图---------
+2021-03-20 19:57:59,243 common_fun.py[line:39]INFO-获取csv文件第3 行数据为:['test', '123456']
+2021-03-20 19:57:59,244 baseView.py[line:16]INFO-open The Test page is https://mail.163.com/
+2021-03-20 19:58:04,720 common_fun.py[line:52]INFO-------------开始捕捉login页面截图---------
+2021-03-20 19:58:10,258 start_driver.py[line:59]INFO-the latest report is 2021-03-20 19_57_17result.html
+2021-03-20 19:58:10,258 run.py[line:27]INFO-begin send email report...........
+2021-03-20 19:58:17,899 start_driver.py[line:48]INFO-Send email sucesss!!!!!!!!!!!!!!
+2021-03-20 19:58:17,945 run.py[line:30]INFO-Test end--------------------
